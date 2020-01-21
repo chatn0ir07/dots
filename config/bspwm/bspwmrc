@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Set background image
+feh --bg-scale --randomize $HOME/Wallpaper/*
+
+# Start X hotkey daemon
+sxhkd &
+
+bspc monitor DP-0 -d i ii iii iv v
+bspc monitor HDMI-0 -d i ii iii iv v
+bspc monitor DVI-D-0 -d i ii iii iv v
+
+bspc config border_width         0
+bspc config window_gap         15 
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+
+# Start polybar
+$HOME/.config/polybar/launch_polybar.sh
+# Start "compton" Compositor for transparency
+/usr/bin/compton
