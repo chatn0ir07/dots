@@ -64,6 +64,7 @@ radius = 0.0
 background = ${colors.background}
 foreground = ${colors.foreground}
 fixed-center = true
+wm-restack = bspwm
 
 line-size = 3
 bottom = true
